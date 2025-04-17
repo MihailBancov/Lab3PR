@@ -1,0 +1,10 @@
+FROM mcr.microsoft.com/mssql/server:2019-latest
+
+ENV ACCEPT_EULA=Y
+ENV SA_PASSWORD=YourStrong@Passw0rd
+ENV MSSQL_PID=Express
+
+# Если хотите добавить начальные данные, создайте файл init.sql в database/migrations
+# COPY ../migrations/init.sql /docker-entrypoint-initdb.d/
+
+EXPOSE 1433
